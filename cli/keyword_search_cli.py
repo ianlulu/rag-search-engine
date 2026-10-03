@@ -24,7 +24,7 @@ def main() -> None:
     results = []
 
     for movie in movie_data["movies"]:
-        if args.query in movie["title"]:
+        if args.query.lower() in movie["title"].lower():
             results.append(movie["title"])
 
     for i, movie in enumerate(results[:5], start = 1):
